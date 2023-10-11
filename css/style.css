@@ -1,0 +1,255 @@
+/* Style dla jasnego motywu */
+body {
+    font-family: 'CustomFont', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2ecc71;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-switch-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    width: 40px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+}
+
+.theme-switch::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked+.theme-switch::before {
+    transform: translateX(20px);
+}
+
+.menu-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.menu-container.dark {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-options label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.menu-options input {
+    width: 60px;
+    font-size: 1.2rem;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu-button {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #2980b9;
+}
+
+.game-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.score-timer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.score-timer #score {
+    margin-bottom: 10px;
+}
+
+.score-timer #timer {
+    font-weight: bold;
+}
+
+.duck {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.bomb {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    color: yellow;
+}
+
+.bread {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    color: #ff8c00;
+}
+
+.message-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+}
+
+.message-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.explosion {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style dla ciemnego motywu */
+body.dark {
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-container.dark {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-container.dark h1 {
+    color: #fff;
+}
+
+.menu-options label.dark {
+    color: #fff;
+}
+
+.menu-button.dark {
+    background-color: #555;
+}
+
+.menu-button.dark:hover {
+    background-color: #444;
+}
+
+/* Style dla ciemnego motywu */
+body.dark {
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-container.dark {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-container.dark h1 {
+    color: #fff;
+}
+
+.menu-options label.dark {
+    color: #fff;
+}
+
+.menu-button.dark {
+    background-color: #555;
+}
+
+.menu-button.dark:hover {
+    background-color: #444;
+}
+
+/* ... Inne style dla ciemnego motywu ... */
